@@ -20,7 +20,6 @@ public class DateConverter implements Converter<String, Date> {
         }catch (Exception e){
 
         }
-        System.out.println();
         return null;
     }
 }
