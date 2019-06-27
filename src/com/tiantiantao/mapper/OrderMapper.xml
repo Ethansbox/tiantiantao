@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.tiantiantao.mapper.OrderMapper">
+
+
+    <resultMap id="OrderMap" type="com.tiantiantao.pojo.Orders">
+        <association property="user" javaType="com.tiantiantao.pojo.User">
+            <result property="userId" column="userId" javaType="java.lang.String" />
+        </association>
+    </resultMap>
+
+
+    <!--添加订单-->
+    <insert id="addOrders"  parameterType="Orders"  >
+        INSERT INTO orders VALUES(#{orderId},#{total},#{state},#{address},#{name},#{tel},#{user.userId})
+    </insert>
+
+
+    <!--批量插入-->
+    <insert id="addOrderItem" parameterType="java.util.List">
+        insert into orderitem (orderItemId, counts, subtotal,commodityId,orderId) values
+        <foreach collection="list" item="item" separator=",">
+            (#{item.orderItemId},
+            #{item.counts},
+            #{item.subtotal},
+            #{item.commodity.commodityId},
+            #{item.orders.orderId})
+        </foreach>
+    </insert>
+
+    <select id="findAllOrders" resultType="Orders">
+        select * from orders
+    </select>
+
+
+</mapper>
