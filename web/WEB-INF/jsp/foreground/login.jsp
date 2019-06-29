@@ -10,18 +10,18 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8" />
-
+    <%--<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8" />--%>
+    <meta http-equiv="x-ua-compatible" content="IE=edge" >
 
     <title>天天淘网上商城</title>
     <meta name="Keywords" content="天天淘网上商城" />
     <meta name="Description" content="天天淘网上商城" />
 
 
-    <link href="../css/style.css" type="text/css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath }/css/style.css" type="text/css" rel="stylesheet">
 
-    <link href="../css/nav2.css" type="text/css" rel="stylesheet"><!--藏品分类 -->
-    <link href="../css/amazeui.min.css" rel="stylesheet" />
+    <link href="${pageContext.request.contextPath }/css/nav2.css" type="text/css" rel="stylesheet"><!--藏品分类 -->
+    <link href="${pageContext.request.contextPath }/css/amazeui.min.css" rel="stylesheet" />
 
 </head>
 
@@ -31,7 +31,7 @@
     <div class="log-rf">
         <div class="logk">
             <form id="loginform" action="${pageContext.request.contextPath }/login.action" method="post">
-                <div class="loto"><img src="../images/login-t.png" width="145" height="145" class="login-t"><img src="../images/login-bg.png" width="221" height="247" class="login-bg"></div>
+                <div class="loto"><img src="${pageContext.request.contextPath }/images/login-t.png" width="145" height="145" class="login-t"><img src="${pageContext.request.contextPath }/images/login-bg.png" width="221" height="247" class="login-bg"></div>
                 <c:if test="${isRegister eq true}">
                     <div class="toubg" >
                         <span class="name-pass">注册成功！请登陆</span>

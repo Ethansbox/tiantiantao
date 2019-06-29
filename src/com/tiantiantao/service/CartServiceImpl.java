@@ -18,6 +18,11 @@ public class CartServiceImpl implements CartService {
         Map<String, CartItem> cartItemMap = cart.getCartItemMap();
         String code = commodity.getCode();
 
+        if(cart.getCartItemMap().size()>=1){
+
+            System.out.println(111);
+        }
+
         //如果存在该商品的购物项，则增加数量，修改购物项小计
         if(cartItemMap.containsKey(code)){
             CartItem cartItem = cartItemMap.get(code);

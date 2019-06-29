@@ -22,15 +22,15 @@
                     <a href="#">欢迎您，${user.username }</a>
                 </c:if>
                 <c:if test="${empty user}">
-                    <a href="login.jsp">请先登录</a>
+                    <a href="${pageContext.request.contextPath }/toLogin.action">请先登录</a>
                     <a href="register.jsp" style="color:#ec2832; padding-left:0;">注册</a>
                 </c:if>
-                <li style="padding-left:10px; background:url(../images/gwc.png) no-repeat left center; background-size:16px;">
-                    <a href="/toCart.action">购物车</a>
+                <li style="padding-left:10px; background:url(${pageContext.request.contextPath }/images/gwc.png) no-repeat left center; background-size:16px;">
+                    <a href="${pageContext.request.contextPath }/toCart.action">购物车</a>
                     <span>|</span></a>
                 </li>
                 <c:if test="${not empty user}">
-                    <a href="/toPersonal.action">我的个人中心</a>
+                    <a href="${pageContext.request.contextPath }/toPersonal.action">我的个人中心</a>
                 </c:if>
                 <c:if test="${empty user}">
                     <a href="${pageContext.request.contextPath }/toLogin.action">我的个人中心</a>
@@ -59,7 +59,7 @@
         <div class="lf fenl">
             <div id="category-2015" onMouseOver="this.className='on'" onmouseleave="this.className=''">
                 <div class="ld">
-                    <img alt="所有产品分类" src="../images/flbg.png" width="21" height="15" class="lf">所有产品分类
+                    <img alt="所有产品分类" src="${pageContext.request.contextPath }/images/flbg.png" width="21" height="15" class="lf">所有产品分类
                 </div>
                 <div id="allsort" style="background:#fff;">
                     <div class="item" onmouseover="this.className='item on'" onmouseleave="this.className='item'">

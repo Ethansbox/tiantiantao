@@ -1,3 +1,4 @@
+/* CSS Document */
 body {
   padding-top: 3.5rem;
 }
@@ -20,4 +21,14 @@ main {
 
 .table td img {
   height: 60px;
+}
+
+.toubg {
+  background: #FFF;
+  margin-bottom: 5px;
+  color: #e01222;
+}
+.toubg .name-pass {
+  font-size: 16px;
+  color: red;
 }

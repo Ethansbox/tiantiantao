@@ -1,9 +1,12 @@
 package com.tiantiantao.pojo;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Orders {
+public class Orders implements Serializable {
+
+    private static final long serialVersionUID = 1L;
 
     private String orderId;         //订单号
 

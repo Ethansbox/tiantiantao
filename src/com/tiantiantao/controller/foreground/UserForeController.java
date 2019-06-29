@@ -127,6 +127,7 @@ public class UserForeController {
     @RequestMapping("/logout")
     public String logout(){         //退出登陆
         request.getSession().removeAttribute("user");
+        request.getSession().removeAttribute("cart");
         return "foreground/login";
     }
 }

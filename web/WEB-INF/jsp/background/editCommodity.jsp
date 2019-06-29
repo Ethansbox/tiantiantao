@@ -10,9 +10,10 @@
 <html lang="zh">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
     <title>天天淘后台系统</title>
-    <link rel="stylesheet" href="../assets/css/bootstrap.css">
-    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath }/assets/css/bootstrap.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath }/assets/css/style.css">
 </head>
 <body>
 <nav class="navbar navbar-expand navbar-dark bg-dark fixed-top">

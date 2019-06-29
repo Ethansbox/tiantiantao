@@ -11,12 +11,13 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8"/>
+    <%--<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8"/>--%>
+    <meta http-equiv="x-ua-compatible" content="IE=edge" >
     <title>天天淘网上商城</title>
     <meta name="Keywords" content="天天淘网上商城"/>
     <meta name="Description" content="天天淘网上商城"/>
-    <link href="../css/style.css" type="text/css" rel="stylesheet">
-    <link href="../css/nav2.css" type="text/css" rel="stylesheet"><!--藏品分类 -->
+    <link href="${pageContext.request.contextPath }/css/style.css" type="text/css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath }/css/nav2.css" type="text/css" rel="stylesheet"><!--藏品分类 -->
 
 
 </head>
@@ -29,9 +30,9 @@
     <div class="juzhong gwc-tk">
         <table width="100%" border="0" cellspacing="0" cellpadding="0">
             <tbody><tr>
-                <td><img src="../images/pa1.png" width="273" height="19"></td>
-                <td><img src="../images/pa20.png" width="362" height="19"></td>
-                <td><img src="../images/pa30.png" width="615" height="19"></td>
+                <td><img src="${pageContext.request.contextPath }/images/pa1.png" width="273" height="19"></td>
+                <td><img src="${pageContext.request.contextPath }/images/pa20.png" width="362" height="19"></td>
+                <td><img src="${pageContext.request.contextPath }/images/pa30.png" width="615" height="19"></td>
             </tr>
             </tbody></table>
         <div class="qing chm">
@@ -54,7 +55,7 @@
 
         <c:forEach items="${cart.cartItemMap }" var="item">
             <div class="gwlb">
-                <a href="#" class="gw-tu" style="background:url(../images/484069aec.jpg) center center no-repeat;"></a>
+                <a href="#" class="gw-tu" style="background:url(${pageContext.request.contextPath }/images/484069aec.jpg) center center no-repeat;"></a>
                 <div class="gw-jk"><a href="#">${item.value.commodity.name }</a></div>
                 <div class="gw-jg">${item.value.commodity.price }元</div>
                 <div class="gw-sl">
@@ -73,7 +74,7 @@
         </div>
         <div class="rf">
             <div class="lf chhj">合计：<span id="zongjiage">${cart.total }</span>元</div>
-            <a href="/toCheckOrder.action" class="jie"><span>去结算</span><span>结算</span></a>
+            <a href="${pageContext.request.contextPath }/toCheckOrder.action" class="jie"><span>去结算</span><span>结算</span></a>
         </div>
     </div>
 </div>

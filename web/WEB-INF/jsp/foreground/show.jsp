@@ -10,12 +10,13 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8" />
+    <%--<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8" />--%>
+    <meta http-equiv="x-ua-compatible" content="IE=edge" >
     <title>天天淘网上商城</title>
     <meta name="Keywords" content="天天淘网上商城" />
     <meta name="Description" content="天天淘网上商城" />
-    <link href="../css/style.css" type="text/css" rel="stylesheet">
-    <link href="../css/nav2.css" type="text/css" rel="stylesheet"><!--藏品分类 -->
+    <link href="${pageContext.request.contextPath }/css/style.css" type="text/css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath }/css/nav2.css" type="text/css" rel="stylesheet"><!--藏品分类 -->
 
 
 
@@ -30,7 +31,7 @@
         <div class="rf" style="width:1200px;">
             <dl class="yplb">
                 <c:forEach items="${commodityList }" var="item">
-                    <dd> <a href="shangpinxiangqing.html" class="yptu"><img src="../images/tt4.jpg" width="230" height="230"></a>
+                    <dd> <a href="shangpinxiangqing.html" class="yptu"><img src="${pageContext.request.contextPath }/images/tt4.jpg" width="230" height="230"></a>
                         <div class="ypmc"> <a href="shangpinxiangqing.html">${item.name }</a> </div>
                         <div>
                             <div class="jiag">${item.price }</div>

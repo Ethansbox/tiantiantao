@@ -1,6 +1,10 @@
 package com.tiantiantao.pojo;
 
-public class OrderItem {    //订单项，订单中的一栏
+import java.io.Serializable;
+
+public class OrderItem implements Serializable {    //订单项，订单中的一栏
+
+    private static final long serialVersionUID = 1L;
 
     private String orderItemId;         //订单项的id
 

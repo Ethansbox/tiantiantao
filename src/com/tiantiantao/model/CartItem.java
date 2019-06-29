@@ -2,7 +2,11 @@ package com.tiantiantao.model;
 
 import com.tiantiantao.pojo.Commodity;
 
-public class CartItem {//购物项，指的是购物车中的一栏，也就是一个商品
+import java.io.Serializable;
+
+public class CartItem implements Serializable {//购物项，指的是购物车中的一栏，也就是一个商品
+
+    private static final long serialVersionUID = 1L;
 
     private Commodity commodity;    //商品
     private int buyNum;             //单个商品的购买数量

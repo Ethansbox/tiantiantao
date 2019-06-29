@@ -11,12 +11,13 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8"/>
+    <%--<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8"/>--%>
+    <meta http-equiv="x-ua-compatible" content="IE=edge" >
     <title>天天淘网上商城</title>
     <meta name="Keywords" content="天天淘网上商城"/>
     <meta name="Description" content="天天淘网上商城"/>
-    <link href="../css/style.css" type="text/css" rel="stylesheet">
-    <link href="../css/nav2.css" type="text/css" rel="stylesheet"><!--藏品分类 -->
+    <link href="${pageContext.request.contextPath }/css/style.css" type="text/css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath }/css/nav2.css" type="text/css" rel="stylesheet"><!--藏品分类 -->
 
 
 </head>
@@ -77,7 +78,7 @@
                         </c:if>
                         <div class="qing aniu">
                             <input type="submit" value="保存" class="bao1">
-                            <a href="/logout.action" class="bao2">退出当前账户</a>
+                            <a href="${pageContext.request.contextPath }/logout.action" class="bao2">退出当前账户</a>
                         </div>
                     </div>
                 </form>
@@ -87,14 +88,14 @@
 
     <div class="grzx_l">
         <div class="photo">
-            <img src="../images/moren_touxiang.jpg" width="100%">
+            <img src="${pageContext.request.contextPath }/images/moren_touxiang.jpg" width="100%">
             <p>个人中心</p>
         </div>
         <ul style="padding-bottom:20px;">
-            <li style="height:50px;"><a><img src="../images/wdxx.png" width="25">
+            <li style="height:50px;"><a><img src="${pageContext.request.contextPath }/images/wdxx.png" width="25">
                 <p style="padding:0; color:#000; font-size:16px; line-height:50px;">我的交易</p></a></li>
             <li><a href="wodedingdan.html"><p>我的订单</p></a></li>
-            <li style="height:50px;"><a><img src="../images/xfjl.png" width="25">
+            <li style="height:50px;"><a><img src="${pageContext.request.contextPath }/images/xfjl.png" width="25">
                 <p style="padding:0; color:#000; font-size:16px; line-height:50px;">会员资料</p></a></li>
             <li><a href="gerenziliao.html"><p>个人资料</p></a></li>
             <li><a href="shouhuodizhi.html"><p>收货地址</p></a></li>

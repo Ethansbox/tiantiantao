@@ -4,6 +4,7 @@
  * Copyright 2011-2017 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
+/* CSS Document */
 :root {
   --blue: #007bff;
   --indigo: #6610f2;
@@ -75,7 +76,13 @@
     page-break-after: avoid;
   }
   .navbar {
-    display: none;
+    display: -ms-flexbox;
+    display: -webkit-box; /* Chrome 4 +，Safari 3.1，iOS Safari 3.2+ */
+    display: -moz-box; /* Firefox 17- */
+    display: -webkit-flex; /* Chrome 21 +，Safari 6.1 +，iOS Safari 7 +，Opera 15/16 */
+    display: -moz-flex; /* Firefox 18+ */
+    display: -ms-flexbox; /* IE 10 */
+    display: flex; /* Chrome 29 +，Firefox 22 +，IE 11 +，Opera 12.1 / 17/18，Android 4.4+ */
   }
   .badge {
     border: 1px solid #000;
@@ -1860,6 +1867,16 @@ pre code {
   transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
 }
 
+.form-control.toubg {
+    background: #FFF;
+    margin-bottom: 5px;
+    color: #e01222;
+}
+.form-control.toubg .name-pass {
+    font-size: 16px;
+    color: red;
+}
+
 .form-control::-ms-expand {
   background-color: transparent;
   border: 0;
@@ -1991,6 +2008,15 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
 
 .form-group {
   margin-bottom: 1rem;
+}
+.form-toub{
+    background: #FFF;
+    margin-bottom: 5px;
+    color: #e01222;
+}
+.form-toub .name-pass{
+    font-size: 16px;
+    color: red;
 }
 
 .form-text {
@@ -3594,7 +3620,15 @@ tbody.collapse.show {
 .navbar {
   position: relative;
   display: -ms-flexbox;
-  display: flex;
+  display: -webkit-box; /* Chrome 4 +，Safari 3.1，iOS Safari 3.2+ */
+  display: -moz-box; /* Firefox 17- */
+  display: -webkit-flex; /* Chrome 21 +，Safari 6.1 +，iOS Safari 7 +，Opera 15/16 */
+  display: -moz-flex; /* Firefox 18+ */
+  display: -ms-flexbox; /* IE 10 */
+  display: flex; /* Chrome 29 +，Firefox 22 +，IE 11 +，Opera 12.1 / 17/18，Android 4.4+ */
+
+
+
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   -ms-flex-align: center;
@@ -3631,8 +3665,15 @@ tbody.collapse.show {
 }
 
 .navbar-nav {
-  display: -ms-flexbox;
-  display: flex;
+
+    display: -ms-flexbox;
+    display: -webkit-box; /* Chrome 4 +，Safari 3.1，iOS Safari 3.2+ */
+    display: -moz-box; /* Firefox 17- */
+    display: -webkit-flex; /* Chrome 21 +，Safari 6.1 +，iOS Safari 7 +，Opera 15/16 */
+    display: -moz-flex; /* Firefox 18+ */
+    display: -ms-flexbox; /* IE 10 */
+    display: flex; /* Chrome 29 +，Firefox 22 +，IE 11 +，Opera 12.1 / 17/18，Android 4.4+ */
+    display: inline-table;
   -ms-flex-direction: column;
       flex-direction: column;
   padding-left: 0;
@@ -3889,6 +3930,13 @@ tbody.collapse.show {
 }
 
 .navbar-expand {
+  display: -ms-flexbox;
+  display: -webkit-box; /* Chrome 4 +，Safari 3.1，iOS Safari 3.2+ */
+  display: -moz-box; /* Firefox 17- */
+  display: -webkit-flex; /* Chrome 21 +，Safari 6.1 +，iOS Safari 7 +，Opera 15/16 */
+  display: -moz-flex; /* Firefox 18+ */
+  display: -ms-flexbox; /* IE 10 */
+  display: flex; /* Chrome 29 +，Firefox 22 +，IE 11 +，Opera 12.1 / 17/18，Android 4.4+ */
   -ms-flex-flow: row nowrap;
       flex-flow: row nowrap;
   -ms-flex-pack: start;

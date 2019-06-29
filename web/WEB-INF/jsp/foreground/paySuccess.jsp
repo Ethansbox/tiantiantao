@@ -11,12 +11,13 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8"/>
+    <%--<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8"/>--%>
+    <meta http-equiv="x-ua-compatible" content="IE=edge" >
     <title>天天淘网上商城</title>
     <meta name="Keywords" content="天天淘网上商城"/>
     <meta name="Description" content="天天淘网上商城"/>
-    <link href="../css/style.css" type="text/css" rel="stylesheet">
-    <link href="../css/nav2.css" type="text/css" rel="stylesheet"><!--藏品分类 -->
+    <link href="${pageContext.request.contextPath }/css/style.css" type="text/css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath }/css/nav2.css" type="text/css" rel="stylesheet"><!--藏品分类 -->
 
 
 </head>
@@ -30,9 +31,9 @@
         <div class="juzhong gwc-tk">
             <table width="100%" border="0" cellspacing="0" cellpadding="0">
                 <tbody><tr>
-                    <td><img src="../images/pa1.png" width="273" height="19"></td>
-                    <td><img src="../images/pa2.png" width="362" height="19"></td>
-                    <td><img src="../images/pa3.png" width="615" height="19"></td>
+                    <td><img src="${pageContext.request.contextPath }/images/pa1.png" width="273" height="19"></td>
+                    <td><img src="${pageContext.request.contextPath }/images/pa2.png" width="362" height="19"></td>
+                    <td><img src="${pageContext.request.contextPath }/images/pa3.png" width="615" height="19"></td>
                 </tr>
                 </tbody></table>
             <div class="qing chm">
@@ -48,7 +49,7 @@
         <div class="cenbg">
 
             <div class="qing" style="width: 500px;margin: 50px auto;">
-                <img src="../images/zfcg.png" width="100" style=" float:left;">
+                <img src="${pageContext.request.contextPath }/images/zfcg.png" width="100" style=" float:left;">
                 <div style="float:left; margin-left:30px;">
                     <h1 style="font-size:20px;">支付成功！</h1>
                     <p style="font-size:14px;">您的订单已经支付成功，请耐心等待卖家发货。</p>

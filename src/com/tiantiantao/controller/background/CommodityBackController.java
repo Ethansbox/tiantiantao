@@ -47,10 +47,44 @@ public class CommodityBackController {
      */
     @RequestMapping("/commodity/addCommodity.action")
     public ModelAndView addCommodity(@ModelAttribute Commodity commodity) {
-        //添加商品
-        commodityService.addCommodity(commodity);
-
         ModelAndView modelAndView = new ModelAndView();
+
+        //用于判断商品条码是否已经存在
+        boolean isAddCommodity;
+        //判断条码是否为空
+        boolean isCodeEmpty;
+
+        //如果商品条码为空，则跳回添加页面
+        if (commodity.getCode()==null||commodity.getCode()==""){
+            modelAndView.setViewName("background/addCommodity");
+            isCodeEmpty = true;
+            modelAndView.addObject("isCodeEmpty",isCodeEmpty);
+            return modelAndView;
+        }
+
+        //判断商品条码是否已经存在
+        if(commodity.getCode()!=null){
+            Commodity temp = commodityService.findByCode(commodity.getCode());
+
+            //如果返回不为空，说明已经存在
+            if(temp!=null){
+                isAddCommodity = false;
+                modelAndView.addObject("isAddCommodity",isAddCommodity);
+                //设置逻辑视图
+                modelAndView.setViewName("background/addCommodity");
+            }
+
+            //如果返回空，则直接插入
+            else {
+                isAddCommodity = true;
+                commodityService.addCommodity(commodity);
+                modelAndView.addObject("isAddCommodity",isAddCommodity);
+                //设置逻辑视图
+                modelAndView.setViewName("background/commodity");
+            }
+
+        }
+
 
         //获取商品列表
         List<Commodity> commodityList = (List<Commodity>) request.getSession().getAttribute("commodityList");
@@ -58,8 +92,8 @@ public class CommodityBackController {
         //往列表添加商品
         commodityList.add(commodity);
 
-        //设置逻辑视图
-        modelAndView.setViewName("background/commodity");
+        request.getSession().setAttribute("commodityList", commodityList);
+
 
         return modelAndView;
     }

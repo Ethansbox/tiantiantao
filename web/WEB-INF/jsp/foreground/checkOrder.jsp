@@ -11,12 +11,13 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8"/>
+    <%--<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8"/>--%>
+    <meta http-equiv="x-ua-compatible" content="IE=edge" >
     <title>天天淘网上商城</title>
     <meta name="Keywords" content="天天淘网上商城"/>
     <meta name="Description" content="天天淘网上商城"/>
-    <link href="../css/style.css" type="text/css" rel="stylesheet">
-    <link href="../css/nav2.css" type="text/css" rel="stylesheet"><!--藏品分类 -->
+    <link href="${pageContext.request.contextPath }/css/style.css" type="text/css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath }/css/nav2.css" type="text/css" rel="stylesheet"><!--藏品分类 -->
 
 
 </head>
@@ -30,9 +31,9 @@
             <table width="100%" border="0" cellspacing="0" cellpadding="0">
                 <tbody>
                 <tr>
-                    <td><img src="../images/pa1.png" width="273" height="19"></td>
-                    <td><img src="../images/pa2.png" width="362" height="19"></td>
-                    <td><img src="../images/pa30.png" width="615" height="19"></td>
+                    <td><img src="${pageContext.request.contextPath }/images/pa1.png" width="273" height="19"></td>
+                    <td><img src="${pageContext.request.contextPath }/images/pa2.png" width="362" height="19"></td>
+                    <td><img src="${pageContext.request.contextPath }/images/pa30.png" width="615" height="19"></td>
                 </tr>
                 </tbody>
             </table>
@@ -74,9 +75,9 @@
                 </div>
                 <div class="lf"><!--选中状态 class为paynn -->
                     <input type="hidden" name="pay_method" value="1" id="pay_method">
-                    <a href="#" id="pay_method_1" class="pay paynn"><img src="../images/pay1.png" width="160" height="60"></a>
-                    <a href="#" id="pay_method_2" class="pay"><img src="../images/pay2.png" width="160" height="60"></a>
-                    <a href="#" id="pay_method_3" class="pay"><img src="../images/pay3.png" width="160" height="60"></a>
+                    <a href="#" id="pay_method_1" class="pay paynn"><img src="${pageContext.request.contextPath }/images/pay1.png" width="160" height="60"></a>
+                    <a href="#" id="pay_method_2" class="pay"><img src="${pageContext.request.contextPath }/images/pay2.png" width="160" height="60"></a>
+                    <a href="#" id="pay_method_3" class="pay"><img src="${pageContext.request.contextPath }/images/pay3.png" width="160" height="60"></a>
                 </div>
             </div>
             <!--配送方式 -->
@@ -88,14 +89,14 @@
             <div class="qing">
                 <div class="qing">
                     <div class="xxti lf">商品及优惠</div>
-                    <a href="/toCart.action" class="rf hui">返回购物车<span> &gt;</span></a>
+                    <a href="${pageContext.request.contextPath }/toCart.action" class="rf hui">返回购物车<span> &gt;</span></a>
                 </div>
                 <div class="qing xcp">
                     <table width="100%" border="0" cellspacing="0" cellpadding="0">
                         <tbody>
                         <c:forEach items="${cart.cartItemMap }" var="item">
                             <tr>
-                                <td width="75"><img src="../images/484069aec.jpg" width="59" height="45"></td>
+                                <td width="75"><img src="${pageContext.request.contextPath }/images/484069aec.jpg" width="59" height="45"></td>
                                 <td width=""><a href="product-view.php?id=1351" class="dj-m1">${item.value.commodity.name }</a>
                                 </td>
                                 <td width="150" align="center">
@@ -125,7 +126,7 @@
                         <div class="fu-yu2 fu-yu3 rf">应付总金额：</div>
                     </div>
                 </div>
-                <div class="qing rf"><a href="/balanceAccounts.action"><input type="button" value="确认并支付" class="jie2"></a>
+                <div class="qing rf"><a href="${pageContext.request.contextPath }/balanceAccounts.action"><input type="button" value="确认并支付" class="jie2"></a>
                 </div>
             </div>
 

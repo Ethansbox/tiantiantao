@@ -1,6 +1,10 @@
 package com.tiantiantao.pojo;
 
-public class Commodity {    //商品
+import java.io.Serializable;
+
+public class Commodity implements Serializable {    //商品
+
+    private static final long serialVersionUID = 1L;
 
     private String commodityId;          //商品id
 

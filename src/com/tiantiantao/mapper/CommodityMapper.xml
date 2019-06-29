@@ -25,6 +25,12 @@
         where commodityId = #{commodityId}
     </select>
 
+    <!--通过code查找商品-->
+    <select id="findByCode" parameterType="String" resultType="Commodity">
+        select * from commodity
+        where code = #{code}
+    </select>
+
     <!--修改商品-->
     <update id="updateCommodity" parameterType="Commodity">
         update commodity

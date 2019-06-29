@@ -45,8 +45,9 @@ public class CommodityServiceImpl implements CommodityService {
 
 
     @Override
+    //通过code查找商品
     public Commodity findByCode(String code) {
-        return null;
+        return commodityMapper.findByCode(code);
     }
 
 
