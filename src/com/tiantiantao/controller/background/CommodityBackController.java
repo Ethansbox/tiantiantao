@@ -38,7 +38,7 @@ public class CommodityBackController {
 
         // 设置逻辑视图
         modelAndView.setViewName("background/commodity");
-        //111
+        //11111222
 
         return modelAndView;
     }
